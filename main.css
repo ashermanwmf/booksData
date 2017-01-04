@@ -7,6 +7,9 @@ body {
   padding: 2%;
   border-radius: 10px;
   margin: 3%;
+  -webkit-box-shadow: -1px 0px 16px 1px rgba(0,0,0,0.46);
+  -moz-box-shadow: -1px 0px 16px 1px rgba(0,0,0,0.46);
+  box-shadow: -1px 0px 16px 1px rgba(0,0,0,0.46);
 }
 
 /*NORMALIZE DIV's*/
@@ -43,6 +46,10 @@ body {
 }
 
 .sort-item:hover {
+  color: black;
+}
+
+.on {
   color: black;
 }
 /*SORT CSS*/

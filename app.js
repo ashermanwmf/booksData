@@ -12,6 +12,9 @@ angular.module("app", [])
     .then(function(data) {
       var updatedData = changeData.manipulateData(data.data);
       $rootScope.content = updatedData.result;
+    })
+    .catch(function(err) {
+      console.log(err);
     });
 
   }])
@@ -54,15 +57,22 @@ angular.module("app", [])
 
     var filterBy = function(e) {
       var value, i, j;
+      var nameSortEl = document.getElementsByClassName("name-sort");
+      var bookSortEl = document.getElementsByClassName("book-sort");
+      var nameClasses = "sort-item name-sort";
+      var bookClasses = "sort-item book-sort";
+
       $rootScope.sortElement = e;
       $rootScope.elementClasses = $rootScope.sortElement.srcElement.className;
       $rootScope.sortBy = $rootScope.sortElement.srcElement.text;
 
-      // update style of buttons clicked
-      // $rootScope.elementClasses = $rootScope.elementClasses + " selected";
-
       switch($rootScope.sortBy){
-        case "Names":
+        case "Name":
+          if(nameSortEl[0].className.split(" ").indexOf("on") === -1){
+            nameSortEl[0].className = nameSortEl[0].className + " on";
+            bookSortEl[0].className = bookClasses;
+          }
+
           for(i=0; i<$rootScope.content.length; i++){
             value = $rootScope.content[i];
             j = i - 1;
@@ -76,6 +86,11 @@ angular.module("app", [])
 
           return;
         case "Books":
+          if(bookSortEl[0].className.split(" ").indexOf("on") === -1){
+            bookSortEl[0].className = bookSortEl[0].className + " on";
+            nameSortEl[0].className = nameClasses;
+          }
+
           for(i=0; i<$rootScope.content.length; i++){
             value = $rootScope.content[i];
             j = i - 1;
