@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+
+  <body>
+    <div ng-app="app" ng-controller="AppCtrl">
+      <div class="main-container">
+
+        <div class="title-container">
+          <div class="main-title">Book Genres</div>
+          <div class="sort-container">
+            <div class="sort-title">
+              Sort By:
+            </div>
+            <div class="sort-options">
+              <a href="javascript:void(0)" class="sort-item name-sort" ng-click="selectSortOption($event);">Names</a> | 
+              <a href="javascript:void(0)" class="sort-item book-sort" ng-click="selectSortOption($event);">Books</a>
+            </div>
+          </div>
+        </div>
+
+        <div ng-repeat="book in content">
+          <div class="book-content book-name">{{book.name}}</div>
+          <div class="book-content book-graph-outer"><div class="book-graph-inner" ng-style="book.style"></div></div>
+          <div class="book-content book-value">{{book.value}}</div>
+        </div>
+
+      </div>
+    </div>
+
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>

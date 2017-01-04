@@ -1,0 +1,86 @@
+body {
+  background-color: #E9E9E9;
+}
+
+.main-container {
+  background-color: white;
+  padding: 2%;
+  border-radius: 10px;
+  margin: 3%;
+}
+
+/*NORMALIZE DIV's*/
+.main-title, .sort-container, .sort-title, .sort-options, .name-sort, .book-sort, .book-content{
+  display: inline-block;
+}
+
+.main-title {
+  color: #6587CE;
+  font-weight: bold;
+}
+
+
+/*TITLE CSS*/
+.title-container {
+  font-size: 1.5em;
+}
+
+@media (max-width: 500px){
+  .title-container {
+    font-size: 1.3em;
+  }
+}
+/*TITLE CSS*/
+
+/*SORT CSS*/
+.sort-container {
+  float: right;
+  color: #D8D8D8;
+}
+
+.sort-item {
+  color: #D8D8D8;
+}
+
+.sort-item:hover {
+  color: black;
+}
+/*SORT CSS*/
+
+/*BOOK CSS*/
+.book-content {
+  margin-top: 4%;
+  font-size: 1.3em;
+}
+
+.book-name {
+  width: 20%;
+  font-weight: bold;
+}
+
+.book-graph-outer {
+  background-color: #E9E9E9;
+  width: 70%;
+  height: 20px;
+}
+.book-graph-inner {
+  position: relative;
+  background-color: #6587CE;
+  /*width: 50%;*/
+  height: 20px;
+}
+
+.book-value {
+  float: right;
+}
+
+@media (max-width: 500px){
+  .book-name {
+    width: 35%;
+    font-size: 1em;
+  }
+  .book-graph-outer {
+    width: 50%;
+  }
+}
+/*BOOK CSS*/
