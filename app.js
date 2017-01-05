@@ -57,16 +57,13 @@ angular.module("app", [])
 
     var filterBy = function(e) {
       var value, i, j;
+      var sortBy = e.srcElement.text;
       var nameSortEl = document.getElementsByClassName("name-sort");
       var bookSortEl = document.getElementsByClassName("book-sort");
       var nameClasses = "sort-item name-sort";
       var bookClasses = "sort-item book-sort";
 
-      $rootScope.sortElement = e;
-      $rootScope.elementClasses = $rootScope.sortElement.srcElement.className;
-      $rootScope.sortBy = $rootScope.sortElement.srcElement.text;
-
-      switch($rootScope.sortBy){
+      switch(sortBy){
         case "Name":
           if(nameSortEl[0].className.split(" ").indexOf("on") === -1){
             nameSortEl[0].className = nameSortEl[0].className + " on";
@@ -111,4 +108,5 @@ angular.module("app", [])
     return {
       filterFunc: filterBy
     };
+
   });
