@@ -23,13 +23,15 @@
             </div>
           </div>
         </div>
-
-        <div ng-repeat="book in content">
-          <div class="book-content book-name">{{book.name}}</div>
-          <div class="book-content book-graph-outer"><div class="book-graph-inner" ng-style="book.style"></div></div>
-          <div class="book-content book-value">{{book.value}}</div>
+        <div class="books-container">
+          <div ng-repeat="book in content">
+            <p>
+              <div class="book-content book-name">{{book.name}}</div>
+              <div class="book-content book-graph-outer"><div class="book-graph-inner" ng-style="book.style"></div></div>
+              <div class="book-content book-value">{{book.value}}</div>
+            </p>
+          </div>
         </div>
-
       </div>
     </div>
 
