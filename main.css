@@ -36,6 +36,7 @@ body {
 }
 /*TITLE CSS*/
 
+
 /*SORT CSS*/
 .sort-container {
   float: right;
@@ -55,14 +56,14 @@ body {
 }
 /*SORT CSS*/
 
-/*BOOK CSS*/
 
+/*BOOK CSS*/
 .books-container {
-  margin-top: 4%;
+  margin-top: 3%;
 }
 
 .book-content {
-  margin-top: 1%;
+  margin-top: 3%;
   font-size: 1.3em;
 }
 
@@ -99,7 +100,7 @@ body {
     width: 35%;
   }
   .book-graph-outer {
-    width: 50%;
+    width: 53%;
   }
 }
 /*BOOK CSS*/
